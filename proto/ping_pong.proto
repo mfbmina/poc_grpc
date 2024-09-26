@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/mfbmina/poc_grpc/proto";
+
+package ping_pong;
+
+service PingPong {
+  rpc Ping (PingRequest) returns (PingResponse) {}
+}
+
+message PingRequest {
+  string message = 1;
+}
+
+message PingResponse {
+  string message = 1;
+}
